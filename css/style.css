@@ -39,7 +39,7 @@ body {
 .history-container {
     background-color: aliceblue;
     width: 200px;
-    padding: 20px; 
+    padding: 10px; 
     margin-left: 10px;
     border-radius: 10px;   
 }
@@ -56,4 +56,42 @@ input {
     padding: 5px 10px;
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+.btn {
+    background-color: rgb(219, 51, 253);
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    font-size: medium;
+    margin-top: 5px;
+    font-weight: 300;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    font-style: italic;
+}
+
+.err {
+    background-color: rgb(255, 139, 139);
+    padding: 5px 0;
+    width: 70%;
+    text-align: center;
+    display: none;
+}
+
+h3 {
+    margin: 5px;
+    font-size: 22px;
+}
+
+.message {
+    font-size: 18px;
+    color: rgb(44, 29, 255);
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.history {
+    padding: 5px;
+    border: 1px black solid;
 }
