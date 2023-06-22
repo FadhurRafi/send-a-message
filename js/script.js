@@ -6,6 +6,7 @@ const message = document.querySelector('.message');
 button.addEventListener('click', sendMessage)
 
 function sendMessage() {
+    let clientMessage = clientInput.value;;
 
     if (clientInput.value) {
         message.textContent = clientInput.value;
@@ -18,5 +19,20 @@ function sendMessage() {
         // }, 10000)
         message.textContent = '';
     }
+
+    sentHistory(clientMessage)
 }
+
+
+function sentHistory(message) {
+
+    let divHistory = document.querySelector('.history');
+    let messItem = document.createElement('li');
+    let messText = document.createTextNode(message);
+
+    divHistory.appendChild(messItem);
+    messItem.appendChild(messText);
+}
+// console.log(sentHistory('message'));
+
 
