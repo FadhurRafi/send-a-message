@@ -6,12 +6,15 @@ const message = document.querySelector('.message');
 button.addEventListener('click', sendMessage)
 
 function sendMessage() {
-    let clientMessage = clientInput.value;;
+    let userInput = clientInput.value;
 
     if (clientInput.value) {
         message.textContent = clientInput.value;
         clientInput.value = '';
         error.style.display = 'none'
+
+        sentHistory(userInput);
+
     } else {
         error.style.display = 'block'
         // setInterval(() => {
@@ -19,10 +22,7 @@ function sendMessage() {
         // }, 10000)
         message.textContent = '';
     }
-
-    sentHistory(clientMessage)
 }
-
 
 function sentHistory(message) {
 
@@ -33,6 +33,5 @@ function sentHistory(message) {
     divHistory.appendChild(messItem);
     messItem.appendChild(messText);
 }
-// console.log(sentHistory('message'));
 
 
